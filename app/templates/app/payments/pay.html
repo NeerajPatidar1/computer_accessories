@@ -1,0 +1,28 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}pay{% endblock title %}
+{% block main-content %}
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-9 offset-sm-3">
+            <h4>Payment</h4>
+            <div>
+                <!-- {% if error %}
+                <h3>{{ error }}</h3>
+                {% endif %} -->
+                <form method="post">
+                    {% csrf_token %}
+                    <label for="username">Username: </label>
+                    <input id="username" type="text" name="username" required>
+                    <label id="password" for="password">Password: </label>
+                    <input type="password" name="password" required>
+                    <label id="amount" for="amount">Amount: </label>
+                    {% comment %} <input type="number" name="amount" value="100"> {% endcomment %}
+                    {% comment %} <input type="submit" name="submit" value="Submit" required> {% endcomment %}
+                    <button type="submit" class="btn btn-primary">Pay</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}

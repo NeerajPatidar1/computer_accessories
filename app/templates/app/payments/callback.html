@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>PAYMENT-BILL</title>
+</head>
+
+<body> <h1 style='color:red;'>payment_bill</h1>
+        <h2>Callback Messsage: </h2>                    <br>
+        <h3> Checksum Verification: {{ message }} </h3> <br>
+        MID: {{ MID }}                                  <br>
+        TXNID: {{ TXNID }}                              <br>
+        ORDERID: {{ ORDERID }}                          <br>
+        BANKTXNID: {{ BANKTXNID }}                      <br>
+        TXNAMOUNT: {{ TXNAMOUNT }}                      <br>
+        CURRENCY: {{ CURRENCY }}                        <br>
+        <h3> STATUS: {{ STATUS }} </h3>                 <br> 
+        RESPCODE: {{ RESPCODE }}                        <br>
+        RESPMSG: {{ RESPMSG }}                          <br>
+        TXNDATE: {{ TXNDATE }}                          <br>
+        GATEWAYNAME: {{ GATEWAYNAME }}                  <br>
+        BANKNAME: {{ BANKNAME }}                        <br>
+        BIN_NAME: {{ BIN_NAME }}                        <br>
+        PAYMENTMODE: {{ PAYMENTMODE }}                  <br>
+        CHECKSUMHASH: {{ CHECKSUMHASH }}                <br> 
+        TXNDATE: {{ TXNDATE }}                          <br>
+        {% comment %} <a href="{% url 'as_pdf' %}"><button class="btn btn-primary">download as pdf</button></a> {% endcomment %}
+        <a href="{% url 'home' %}"><button class="btn btn-primary">view profile</button></a>
+        {% comment %} <a href="{% url 'home' %}">view</a> {% endcomment %}
+</body>
+</html>
